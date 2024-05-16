@@ -1,4 +1,3 @@
-package com.pelicula.pelicula.java.com.pelicula.pelicula.models;
 
 import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
@@ -23,7 +22,7 @@ public class usuario {
     private String correo;
 
     @Column(name="contraseña")
-    private String contrasenia;
+    private String contraseña;
 
     public Long getId() {
         return id;
@@ -43,11 +42,11 @@ public class usuario {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    public String getContrasenia() {
-        return contrasenia;
+    public String getContraseña() {
+        return contraseña;
     }
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
     
 }
