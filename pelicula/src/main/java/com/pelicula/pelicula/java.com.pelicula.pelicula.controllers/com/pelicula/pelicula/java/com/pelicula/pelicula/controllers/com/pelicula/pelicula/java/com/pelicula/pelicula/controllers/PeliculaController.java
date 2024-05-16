@@ -5,23 +5,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pelicula.pelicula.java.com.pelicula.pelicula.repositories.usuarioRepository;
-import com.pelicula.pelicula.java.com.pelicula.pelicula.models.usuario;
+import com.pelicula.pelicula.java.com.pelicula.pelicula.models.pelicula;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/usuario/")
-public class UsuarioController {
+@RequestMapping("/api/pelicula/")
+public class peliculaController {
     @Autowired
-    private usuarioRepository usuarioRepo;
+    private peliculaRepository peliRepo;
     
     @GetMapping
-    public List<usuario> getAllUsuarios() {
-        return usuarioRepo.findAll();
+    public List<pelicula> getAllUsuarios() {
+        return peliRepo.findAll();
     }
     
     @GetMapping("/{id}")
     public ResponseEntity<usuario> getPersonaById(@PathVariable Long id) {
-        Optional<usuario> persona = usuarioRepo.findById(id);
+        Optional<pelicula> persona = peliRepo.findById(id);
         return persona.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
     
