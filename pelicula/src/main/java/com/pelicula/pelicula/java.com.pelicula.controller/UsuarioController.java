@@ -1,3 +1,5 @@
+package com.pelicula.pelicula.java.com.pelicula;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.pelicula.pelicula.java.com.pelicula.pelicula.repositories.usuarioRepository;
 import com.pelicula.pelicula.java.com.pelicula.pelicula.models.usuario;
 import java.util.List;
+import java.util.Optional;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 @RequestMapping("/api/usuario/")

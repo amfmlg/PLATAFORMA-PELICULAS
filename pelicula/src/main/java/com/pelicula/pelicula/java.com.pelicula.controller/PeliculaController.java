@@ -29,5 +29,5 @@ public class PeliculaController {
         Optional<pelicula> pelicula = peliRepo.findById(id);
         return pelicula.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
-    
+      
 } 
