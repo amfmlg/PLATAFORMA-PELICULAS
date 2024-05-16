@@ -16,6 +16,6 @@ CREATE TABLE IF NOT EXISTS pelicula(
     genero varchar(255),
     descripcion varchar(255),
     añoLanzamiento INT,
-    duracion date,
+    duracion int,
     valoracion float
 );
