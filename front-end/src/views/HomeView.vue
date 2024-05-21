@@ -7,6 +7,68 @@ const goto = () => {
 </script>
 
 <template>
-<h1>Hola mundo</h1>
-<button @click="goto">example</button>
+    <header>
+      <h1>Peli-culones</h1>
+    </header>
+    <main>
+       <div class="form">
+        <form action="">
+            <label for="">Usuario: </label>
+            <input type="text" id="usuario" placeholder="userExample">
+            <label for="">Correo: </label>
+            <input type="email" id="correo" placeholder="example@gmail.com">
+            <label for="">Contraseña: </label>
+            <input type="password" id="contraseña" placeholder="contraseña">
+            <button @click="goto">Iniciar Sesion</button>
+        </form>
+       </div>
+    </main>
 </template>
+
+<style>
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+label {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    width: 80%;
+}
+input:focus {
+    outline: none;
+    border-color: rgb(251, 89, 89);
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(245, 79, 79);
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: rgba(231, 140, 140, 0.8);
+}
+button:hover {
+    background-color: rgba(186, 58, 58, 0.8);
+}
+
+</style>
