@@ -1,21 +1,23 @@
-Create database pelis;
-Use pelis;
+Create database peliculas;
+Use peliculas;
 
-CREATE TABLE IF NOT EXISTS usuario (
-    idUsuario INT primary key not null,
-    usuario VARCHAR(255),
-    contraseña varchar(255),
-    correo varchar(255)
-);
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(255) NOT NULL,
+  `correo` varchar(255) NOT NULL,
+  `contraseña` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-CREATE TABLE IF NOT EXISTS pelicula(
-	idPelicula INT primary key not null,
-    titulo varchar (255),
-    director varchar (255),
-    reparto varchar (255),
-    genero varchar(255),
-    descripcion varchar(255),
-    añoLanzamiento INT,
-    duracion date,
-    valoracion float
-);
+
+CREATE TABLE `pelicula` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(255) NOT NULL,
+  `director` varchar(255) NOT NULL,
+  `reparto` varchar(255) NOT NULL,
+  `genero` varchar(255) NOT NULL,
+  `descripcion` varchar(255) NOT NULL,
+  `fechaLanzamiento` date NOT NULL,
+  `duracion` int(11) NOT NULL,
+  `valoracion` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
