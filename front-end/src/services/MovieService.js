@@ -4,7 +4,7 @@ export default class MovieServie {
     async getAllMovies() {
         const rawResponse = await fetch(this.baseUri, {
             headers: {
-                'Authorization': ' Bearer ACCESS_TOKEN',
+                'Authorization': ' Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZTk5NDAyNjY5MmQ1MmNiMjkwM2UyYTQ0NzgyMDQ0NCIsInN1YiI6IjY2NGVmZGE5NTdmMjFmYTc2NWNhZTJkNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tv9CdmiDX8BQUzliVL-XNZepsgrBtliVwzobqbAJb5o',
                 'Accept' : 'application/json'
             }
         })
