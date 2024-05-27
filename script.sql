@@ -8,14 +8,3 @@ CREATE TABLE IF NOT EXISTS usuario (
     correo varchar(255)
 );
 
-CREATE TABLE IF NOT EXISTS pelicula(
-	idPelicula INT primary key not null,
-    titulo varchar (255),
-    director varchar (255),
-    reparto varchar (255),
-    genero varchar(255),
-    descripcion varchar(255),
-    añoLanzamiento INT,
-    duracion int,
-    valoracion float
-);
