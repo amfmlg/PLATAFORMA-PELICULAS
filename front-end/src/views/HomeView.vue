@@ -27,6 +27,9 @@ const goto = () => {
 </template>
 
 <style>
+body{
+  background-color: rgb(252, 192, 192);
+}
 form {
     display: flex;
     flex-direction: column;
@@ -34,8 +37,9 @@ form {
     justify-content: center;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(210, 102, 102, 0.4);
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.4);
     width: 100%;
+    border: 1px black solid;
 }
 h1 {
     font-size: 3rem;
