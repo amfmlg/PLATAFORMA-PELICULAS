@@ -4,6 +4,7 @@ import router from '@/router';
 const goto = () => {
   router.push('/example')
 }
+
 </script>
 
 <template>
@@ -33,7 +34,7 @@ form {
     justify-content: center;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px rgba(210, 102, 102, 0.4);
     width: 100%;
 }
 h1 {
