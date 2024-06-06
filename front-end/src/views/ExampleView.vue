@@ -37,8 +37,7 @@
       <div class="grid-item">
         <img src="https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg" alt="The Shawshank Redemption">
         <h3>The Shawshank Redemption</h3>
-      </div>
-      
+      </div> 
   </div>
     <button class="volver" @click="goto">Volver</button>
   </div>
@@ -81,8 +80,10 @@ const goto = () => {
     gap: 20px;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.348);
     border-radius: 10px;
+    margin-bottom: 5%;
+    
   }
 
   .grid-item {
@@ -98,5 +99,9 @@ const goto = () => {
     margin-top: 10px;
     font-size: 1.2rem;
     color: #333;
+  }
+
+  img:hover{
+    width: 105%;
   }
 </style>
