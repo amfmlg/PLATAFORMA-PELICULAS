@@ -1,29 +1,44 @@
 <script setup>
 import router from '@/router';
+import { ref } from 'vue';
 
-const goto = () => {
-  router.push('/example')
-}
 
+const usuario = ref('');
+const correo = ref('');
+const contraseña = ref('');
+
+const saveUser = async () => {
+  try {
+    const response = await axios.post('http://localhost:3306/saveUser', {
+      usuario: usuario.value,
+      correo: correo.value,
+      contraseña: contraseña.value
+    });
+    console.log(response.data.message);
+    router.push('/example');
+  } catch (error) {
+    console.error('Error al guardar el usuario:', error);
+  }
+};
 </script>
 
 <template>
-    <header>
-      <h1>Peli-culones</h1>
-    </header>
-    <main>
-       <div class="form">
-        <form action="">
-            <label for="">Usuario: </label>
-            <input type="text" id="usuario" placeholder="userExample">
-            <label for="">Correo: </label>
-            <input type="email" id="correo" placeholder="example@gmail.com">
-            <label for="">Contraseña: </label>
-            <input type="password" id="contraseña" placeholder="contraseña">
-            <button @click="goto">Iniciar Sesion</button>
-        </form>
-       </div>
-    </main>
+  <header>
+    <h1>Peli-culones</h1>
+  </header>
+  <main>
+    <div class="form">
+      <form @submit.prevent="saveUser">
+        <label for="usuario">Usuario: </label>
+        <input v-model="usuario" type="text" id="usuario" placeholder="userExample">
+        <label for="correo">Correo: </label>
+        <input v-model="correo" type="email" id="correo" placeholder="example@gmail.com">
+        <label for="contraseña">Contraseña: </label>
+        <input v-model="contraseña" type="password" id="contraseña" placeholder="contraseña">
+        <button type="submit">Iniciar Sesion</button>
+      </form>
+    </div>
+  </main>
 </template>
 
 <style>
